@@ -1,0 +1,74 @@
+
+<HTML>
+<HEAD>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+<TITLE>Strona zespołu CADAVER</TITLE>
+</HEAD>
+<script language="JavaScript">
+/* Function that swaps images. */
+function cng(id, newSrc) {
+    var theImage = FWFindImage(document, id, 0);
+    if (theImage) {
+        theImage.src = newSrc;
+    }
+}
+
+/* Functions that track and set toggle group button states. */
+function FWFindImage(doc, name, j) {
+    var theImage = false;
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+    if (theImage) {
+        return theImage;
+    }
+    if (doc.layers) {
+        for (j = 0; j < doc.layers.length; j++) {
+            theImage = FWFindImage(doc.layers[j].document, name, 0);
+            if (theImage) {
+                return (theImage);
+            }
+        }
+    }
+    return (false);
+}
+
+// stop hiding -->
+//-->
+</script>
+<BODY leftmargin="0" rightmargin="0" topmargin="0" bgcolor="#000000">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  BGCOLOR="#000000" align="top" valign="top">
+
+<TR>
+		<TD>
+			<IMG SRC="images/kreg1.jpg" WIDTH=159 HEIGHT=4></TD>
+</tr>
+<tr>
+<td>
+<!--przyciski-->
+   <a href="o_nas.htm"  target="main" onMouseOut="cng('o_nas','o_nas.jpg'); " onMouseOver="cng('o_nas','o_nas2.jpg');" ><img name="o_nas" src="o_nas.jpg" border="0" width=159 height=24 ALT="Skład grupy, historia zespołu,..."></a><br>
+   <a href="tak_wygl6.htm"  target="main" onMouseOut="cng('tak_wygl','tak_wygl.jpg'); " onMouseOver="cng('tak_wygl','tak_wygl2.jpg');" ><img name="tak_wygl" src="tak_wygl.jpg" border="0" width=159 height=24 ALT="Foto galeria"></a><BR>
+   <a href="muzyka.htm"  target="main" onMouseOut="cng('nasza_muz','nasza_muz.jpg'); " onMouseOver="cng('nasza_muz','nasza_muz2.jpg');" ><img name="nasza_muz" src="nasza_muz.jpg" border="0" width=159 height=24 ALT="Muzyka"></a><BR>
+   <a href="koncerty.htm"  target="main" onMouseOut="cng('koncerty','koncerty.jpg'); " onMouseOver="cng('koncerty','koncerty2.jpg');" ><img name="koncerty" src="koncerty.jpg" border="0" width=159 height=24 ALT="Koncerty"></a><BR>
+   <a href="teksty.htm"  target="main" onMouseOut="cng('teksty','teksty.jpg'); " onMouseOver="cng('teksty','teksty2.jpg');" ><img name="teksty" src="teksty.jpg" border="0" width=159 height=24 ALT="Teksty"></a><BR>
+   <a href="kontakt.htm" target="main" onMouseOut="cng('kontakt','kontakt.jpg'); " onMouseOver="cng('kontakt','kontakt2.jpg');" ><img name="kontakt" src="kontakt.jpg" border="0" width=159 height=24 ALT="Napisz do nas"></a><BR>
+   <a href="kws.htm"  target="main" onMouseOut="cng('str_ws','str_ws.jpg'); " onMouseOver="cng('str_ws','str_ws2.jpg');" ><img name="str_ws" src="str_ws.jpg" border="0" width=159 height=24 ALT="Jesteśmy jedynym gatunkiem na Ziemi używającym pisma. Korzystaj z niego."></a><BR>
+ <a href="linki.htm"  target="main" onMouseOut="cng('linki','linki.jpg'); " onMouseOver="cng('linki','linki2.jpg');" ><img name="linki" src="linki.jpg" border="0" width=159 height=24 ALT="Linki"></a><br>
+<!--koniec przycisków-->
+<TR>
+		<TD WIDTH=159 HEIGHT=203>
+			<IMG SRC="images/kreg2.jpg" WIDTH=159 HEIGHT=203></TD>
+	</TR>
+	<TR>
+		<TD WIDTH=159 HEIGHT=251>
+			<IMG SRC="images/kreg3.jpg" WIDTH=159 HEIGHT=251></TD>
+	</TR>
+<TR>
+		<TD>
+			<IMG SRC="images/kreg4.jpg" WIDTH=159 HEIGHT=219></TD>
+</TR>
+
+
+</table>
+</BODY>
+</HTML>
